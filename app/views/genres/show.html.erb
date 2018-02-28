@@ -1,2 +1,7 @@
-<h1>Genres#show</h1>
-<p>Find me in app/views/genres/show.html.erb</p>
+<h1><%= @genre.name %></h1>
+<hr />
+<p>What would you like to do?</p>
+  <br />
+  <%= link_to 'Edit Genre', edit_genre_path(@genre) %>
+    <br />
+    <%= link_to 'Delete Genre', @genre, method: :delete %>

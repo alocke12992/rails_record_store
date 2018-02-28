@@ -2,3 +2,8 @@
 <p>To see a list of albums</p>
 <%= link_to 'Create new genre', new_genre_path %>
 
+<div>
+  <% @genres.each do |genre| %> 
+      <p><%= link_to genre.name, genre %></p>
+  <% end %> 
+</div>
