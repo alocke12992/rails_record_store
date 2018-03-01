@@ -1,2 +1,13 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<h1><%= @genre.name %></h1>
+  <div>
+    <img src='<%= @album.artwork %>' alt='album artwork' height=200px>
+    <h3><%= @album.title %> - <%= @album.artist %></h3>
+  </div>
+  <div>
+    <%= link_to 'Edit Album', edit_genre_album_path([@genre, @album]) %>
+    <%= link_to 'Delete Album', [@genre, @album], method: :delete %>
+    <%= link_to 'Back To All Albums', genre_albums_path %>
+  </div>
+
+
+

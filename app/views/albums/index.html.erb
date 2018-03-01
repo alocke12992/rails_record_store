@@ -1,2 +1,9 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<h1>Click an Album To View details</h1>
+<%= link_to 'Create a new Album', new_genre_album_path(@genre) %>
+  <ul>
+    <% @albums.each do |album| %>
+      <li>
+        <%= link_to album.title, [@genre, album] %>
+      </li>
+      <% end %>
+  </ul>
